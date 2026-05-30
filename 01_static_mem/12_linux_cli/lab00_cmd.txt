@@ -1,0 +1,76 @@
+ 
+ cd P
+    2  ls
+    3  cd Programmeerimine\ I\ -\ C/
+    4  ls
+    5  cd 12folder/
+    6  ls
+    7  cls
+    8  clear
+    9  history
+   10  wget blue.pri.ee/lt_en.zip
+   11  ls
+   12  unzip lt_en.zip
+   13  ls
+   14  ls -lath
+   15  cd LinuxTask/
+   16  ls
+   17  ls -lath
+   18  ./tester
+   19  cd ~
+   20  wget blue.pri.ee/.vimrc
+   21  ls
+   22  cd -
+   23  ./tester
+   24  cd ~/M/
+   25  ls -lath
+   26  ls -lath | grep .
+   27  ls -la
+   28  ls -lath | grep Risto
+   29  ls -lath | grep risto
+   30  cd risto.heinsar/.hidden_for_iax0583/
+   31  ls
+   32  cat msg.dat
+   33  tldr cat
+   34  tldr cp
+   35  cp msg.dat /home/frkirc/P/Programmeerimine\ I\ -\ C/12folder/LinuxTask/
+   36  cd -
+   37  cd /home/frkirc/P/Programmeerimine\ I\ -\ C/12folder/LinuxTask/
+   38  ls
+   39  ./tester
+   40  vim matricula
+   41  vim hello.c
+   42  gcc hello.c -o hello
+   43  ls
+   44  ./hello
+   45  ./tester
+   46  vim matricula
+   47  ./tester
+   48  gcc hello.c -o hello
+   49  vim hello.c
+   50  gcc hello.c -o hello
+   51  ./tester
+   52  vim hello.c
+   53  ./tester
+   54  gcc hello.c -o hello
+   55  ./tester
+   56  vim hello.c
+   57  gcc hello.c -o hello
+   58  ./tester
+   59  vim hello.c
+   60  ./tester
+   61  gcc hello.c -o hello
+   62  ./tester
+   63  vim hello.c
+   64  gcc hello.c -o hello
+   65  ./tester
+   66  ls
+   67  cat result
+   68  firefox https://bit.ly/2GX4DKe
+   69  history
+   70  uname -a
+   71  tldr ls -h
+   72  tldr ls
+   73  tldr cp
+   74  ls
+   75  cd *.c ~/codes/

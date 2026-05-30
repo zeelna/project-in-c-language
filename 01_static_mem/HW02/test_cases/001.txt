@@ -1,0 +1,10 @@
+9
+Juku 99.5
+Meelis 91.0
+Peeter 97.5
+Ats 96.5
+Teet 100.0
+Paul 98.5
+Anti 97.0
+Peep 98.0
+Mart 99.0

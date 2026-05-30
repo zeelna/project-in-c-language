@@ -1,0 +1,28 @@
+
+  109  cd ~/P/Programmeerimine\ I\ -\ C/12folder/
+  110  mkdir logtask
+  111  cd logtask/
+  112  wget http://www.tud.ttu.ee/web/Risto.Heinsar/sensors.txt
+  113  ls
+  114  cat sensors.txt | grep pattern
+  115  cat sensors.txt | grep -E sensor[1-3]:
+  116  tail sensors.txt | grep -E sensor[1-3]:
+  117  head  sensors.txt | grep -E sensor[1-3]:
+  118  cat sensors.txt | grep -E sensor[1-3]:
+  119  cat sensors.txt
+  120  cat sensors.txt | grep -E SENSOR5:
+  121  cat sensors.txt | grep -E ERROR:SENSOR5:
+  122  cat sensors.txt | grep -E ERROR: SENSOR5:
+  123  cat sensors.txt | grep -E  "ERROR: SENSOR5:"
+  124  cat sensors.txt | grep -E  "ERROR: SENSOR5:" >> output.txt
+  125  ls
+  126  echo output.txt
+  127  cat sensors.txt | grep -E  "ERROR: SENSOR5:" >> output.txt
+  128  cat output.txt
+  129  cat sensors.txt | grep -E  "ERROR: [SENSOR5:]|[MOTOR1]:"
+  130  cat sensors.txt | grep -E  "ERROR: SENSOR5:|MOTOR1:"
+  131  cat sensors.txt | grep -E  "ERROR: SENSOR5:|ERROR: MOTOR1:"
+  132  cat sensors.txt | grep -E  "ERROR: SENSOR5:|ERROR: MOTOR1:" >> 221925ivcm.txt
+  133  cat 221925ivcm.txt
+  134  cp 221925ivcm.txt ~/W/
+  135  history

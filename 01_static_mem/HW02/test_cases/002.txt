@@ -1,0 +1,14 @@
+12
+Juku 99.5
+Madis 96.5
+Toomas 0.0
+Meelis 91.0
+Peeter 97.5
+Ats 96.5
+Teet 0.0
+Aare 86.5
+Paul 98.5
+Anti 97.0
+Peep 98.0
+Mart 94.5
+ 

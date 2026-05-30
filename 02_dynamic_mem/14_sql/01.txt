@@ -1,0 +1,19 @@
+--INSERT INTO subjects (name_en, name_et, code, credits, assesment_type)
+--VALUES ('Introduction to Programming', 'Programmeerimise algkursus', 'ITI0102', 6, 'Exam');
+
+--INSERT INTO subjects (name_en, name_et, code, credits, assesment_type)
+--VALUES ('Programming', 'Programmeerimise põhikursus', 'ITI0202', 6, 'Exam');
+
+--INSERT INTO subjects (name_en, name_et, code, credits, assesment_type)
+--VALUES ('Cryptography', 'Krüptograafia', 'ICS0008', 6, 'Exam');
+
+--INSERT INTO declarations (student_id, subject_id, grade)
+--VALUES (12, 14, 1);
+
+--INSERT INTO declarations (student_id, subject_id, grade)
+--VALUES (12, 1, 4);
+
+--INSERT INTO declarations (student_id, subject_id, grade)
+--VALUES (12, 2, 3);
+
+

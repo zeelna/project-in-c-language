@@ -1,0 +1,6 @@
+Mari 5
+Tiiu 4
+Marko 3
+Taavi 5
+Getter 4
+Liine 2

@@ -1,0 +1,1 @@
+gcc -lcurl -std=c99 -g -Wall -Wextra -Wconversion -o program -fsanitize=address data_processor.c file_helper.c main.c -lcurl

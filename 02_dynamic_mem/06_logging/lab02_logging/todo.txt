@@ -1,0 +1,27 @@
+
+    1. Programmi käivitamine ja sulgemine
+    2. Sisendfaili avamise seisund (edukas / ebaõnnestunud)
+    3. Faili lugemine lõpetatud. Logis kuva loetud ridade arv!
+    4. Faili lugemine katkestatud kuna massiivi maksimaalne piir on ületatud (maksimaalne piir kuvatakse logis).  NB! Sul on struktuuride massiiv ja struktuuri liikmena hinnete massiiv!
+    5. Viga aine keskmise hinde arvutamisel.
+
+
+	Lõpusirge:
+	1. kasutaja sisestab logi taseme. Kui ei sisesta, siis vaikeväärtus initsialiseerida
+	
+	2. Kasutaja sisestab logi faili nime. Kui ei sisesta, siis vaikeväärtus initsialiseerida
+
+
+
+			/** Limit p->grades int-arr[] length. NB: 'intArrLen' will be basis for subject's grades array len ('p->gradesLen')**/
+			if (j >= GRADES_COUNT)
+			{
+				/** IMPORTANT: snprintf() to include variable in log message content. **/
+				char message[LOG_MESSAGE_LEN] = {0};
+				snprintf(message, LOG_MESSAGE_LEN,
+				 "Limit %d! Grade '%d' [i:%d] skipped in %s",
+									GRADES_COUNT, intArr[j], j, p->name);
+				Logger(message, ERROR);
+				
+				break;
+			}	

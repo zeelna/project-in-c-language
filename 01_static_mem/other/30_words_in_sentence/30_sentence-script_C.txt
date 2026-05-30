@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+int main() {
+    const char *forbidden_words[] = {"example1", "example2"}; // Lower case.
+    const char *raw_text = "Veni vidi vici. Vidi veni veni veni."; // Put your raw text here.
+
+    char *sentences[100]; // Assuming a maximum of 100 sentences.
+    int sentence_count = 0;
+
+    char *token = strtok((char *)raw_text, ".");
+    while (token != NULL && sentence_count < 100) {
+        sentences[sentence_count] = token;
+        sentence_count++;
+        token = strtok(NULL, ".");
+    }
+
+    for (int i = 0; i < sentence_count; i++) {
+        char *sentence = sentences[i];
+        char *words[30]; // Assuming a maximum of 30 words per sentence.
+        int word_count = 0;
+
+        char *word = strtok(sentence, " ");
+        while (word != NULL && word_count < 30) {
+            words[word_count] = word;
+            word_count++;
+            word = strtok(NULL, " ");
+        }
+
+        if (word_count > 30) {
+            printf("TOO LONG: %s\n", sentence);
+            break;
+        } else {
+            bool forbidden = false;
+            for (int j = 0; j < word_count; j++) {
+                char *lower_word = strdup(words[j]);
+                for (int k = 0; lower_word[k]; k++) {
+                    lower_word[k] = tolower(lower_word[k]);
+                }
+
+                for (int k = 0; k < sizeof(forbidden_words) / sizeof(forbidden_words[0]); k++) {
+                    if (strcmp(lower_word, forbidden_words[k]) == 0) {
+                        printf("FORBIDDEN WORD: %s\n", sentence);
+                        forbidden = true;
+                        break;
+                    }
+                }
+                free(lower_word);
+
+                if (forbidden) {
+                    break;
+                }
+            }
+        }
+    }
+
+    return 0;
+}

@@ -1,0 +1,59 @@
+Set build commands
+'g++ -Wall -o -Wextra -Wconversion -g -Wfloat-equal -Wshadow -fanalyzer -Wunreachable-code -Werror -pedantic "%e" "%f"
+
+g++ -Wall -o -Wextra -Wconversion -g -Wfloat-equal -Wshadow -fanalyzer "%e" "%f"
+
+
+###CLI -linterid 
+clang-tidy v1.c 
+ccpcheck v1.c
+
+sudo apt install ccpcheck
+
+
+###GCC --- lipud 
+---- fanalyzer vajab gcc-12!!!!!!!
+gcc-12 -Wall -Wextra -fanalyzer v1.c -o v1
+valgrind ./v1
+
+gcc -std=c99 -Wall -Wextra -fsanitize=address -g  v2.c -o v1 
+./v1
+
+#### -fsanitize=address ja valgrind ./program lähevad vastuollu. Seega kompileeri uuesti ilma -fsanitize=address liputa.
+
+gcc-12 -Wall -Wextra -fanalyzer v1.c -o v1
+valgrind ./v1
+
+### Valgrind
+
+gcc-12 -Wall -Wconversion -Wextra -fanalyzer v1.c -o program
+valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./program
+
+
+
+
+
+gcc -lcurl -std=c99 -g -Wall -Wextra -Wconversion -o program -fsanitize=address *.c
+
+gcc -lcurl -std=c99 -g -Wall -Wextra -Wconversion -o program  *.c -lcurl
+
+
+## For L-curl Week05, task 02
+
+
+gcc-12 -fanalyzer -lcurl -std=c99 -g -Wall -Wextra -Wconversion -o program  *.c -lcurl
+gcc -lcurl -std=c99 -g -Wall -Wextra -Wconversion -o program  *.c -lcurl
+gcc -lcurl -std=c99 -g -Wall -Wextra -Wconversion -o program -fsanitize=address *.c -lcurl
+
+valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./program 
+
+clang-tidy *.c
+
+
+
+
+
+
+
+
+

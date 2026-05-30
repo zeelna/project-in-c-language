@@ -1,0 +1,52 @@
+--SELECT fname AS 'First Name', lname AS 'Last Name', income AS 'Income'
+--FROM person
+--WHERE income > 20000
+--ORDER BY income DESC;
+
+--SELECT fname AS 'First Name', lname AS 'Last Name', income AS 'Income'
+--FROM person
+--WHERE fname LIKE 'Mar%'
+--ORDER BY income DESC;
+
+-- tabelite liitmine, kui isikukood sama
+--SELECT *
+--FROM person
+--JOIN cars 
+--ON person.eid = cars.owner_eid;
+
+-- Kuvamine ainult inimesi, kel on automaks.
+--SELECT fname AS 'First Name', lname AS 'Last Name', income AS 'Income', SUM(tax) AS 'Summed TAX'
+--FROM person
+--JOIN cars 
+--ON person.eid = cars.owner_eid
+--GROUP BY person.eid;
+
+-- Kuvamine inimesi, kelle automax on NULL
+--SELECT fname AS 'First Name', lname AS 'Last Name', income AS 'Income', SUM(tax) AS 'Summed TAX'
+--FROM person
+--LEFT JOIN cars 
+--ON person.eid = cars.owner_eid
+--GROUP BY person.eid;
+
+-- ümmardatud tax.
+--SELECT fname AS 'First Name', lname AS 'Last Name', income AS 'Income', SUM(tax) AS 'Summed TAX', ROUND(SUM(tax) * 100.0 / income, 2) AS 'Rounded Tax'
+--FROM person
+--LEFT JOIN cars 
+--ON person.eid = cars.owner_eid
+--GROUP BY person.eid;
+
+
+SELECT fname AS 'First Name',
+ lname AS 'Last Name',
+ income AS 'Income',
+ SUM(tax) AS 'Summed TAX', 
+ ROUND(SUM(tax) * 100.0 / income, 2) AS 'Rounded Tax'
+FROM person
+LEFT JOIN cars 
+ON person.eid = cars.owner_eid
+GROUP BY person.eid;
+
+
+
+
+

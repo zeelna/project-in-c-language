@@ -1,0 +1,29 @@
+ 
+
+--SELECT eid AS 'Isikukood', fname AS 'Eesnimi', lname AS 'Perenimi', grade AS 'Hinne'
+--FROM students
+--JOIN declarations ON students.id = declarations.student_id
+--WHERE students.fname LIKE 'Marko';
+
+
+--SELECT eid AS 'Isikukood', fname AS 'Eesnimi', lname AS 'Perenimi', grade AS 'Hinne', name_et AS 'Aine nimi', code AS 'Aine kood', credits AS 'Ainepunktid'
+--FROM students
+--JOIN declarations ON students.id = declarations.student_id
+--JOIN subjects ON subjects.id = declarations.subject_id
+--WHERE students.fname LIKE 'Frank Christopher'
+--ORDER BY grade DESC;
+
+SELECT eid AS 'Isikukood', fname AS 'Eesnimi', lname AS 'Perenimi',
+ name_et AS 'Aine nimi', code AS 'Aine kood',
+ SUM(credits) AS 'Teenitud EAPd',
+ --ROUND((SUM(grade) * SUM(credits)) / SUM(credits), 2) AS 'Kaalutud keskmine hinne'
+ --SUM(grade * credits) / SUM(credits) AS 'Kaalutud keskmine hinne'
+
+ ROUND(SUM(grade * credits * 1.00) / SUM(credits), 2) AS 'Kaalutud keskmine hinne'
+
+FROM students
+JOIN declarations ON students.id = declarations.student_id
+JOIN subjects ON subjects.id = declarations.subject_id
+GROUP BY students.eid
+ORDER BY grade DESC;
+
